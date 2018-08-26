@@ -16,6 +16,8 @@
 		CC62761921302B1400882A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC62761821302B1400882A61 /* Assets.xcassets */; };
 		CC62761C21302B1400882A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC62761A21302B1400882A61 /* LaunchScreen.storyboard */; };
 		CC62762721302B1400882A61 /* learningPhysicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62762621302B1400882A61 /* learningPhysicsTests.swift */; };
+		CC8916AB21317A2300703E02 /* SKPhysicsBodyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8916AA21317A2300703E02 /* SKPhysicsBodyExtension.swift */; };
+		CCCC4EE6213329E300451350 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC4EE5213329E300451350 /* Ball.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		CC62762221302B1400882A61 /* learningPhysicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learningPhysicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC62762621302B1400882A61 /* learningPhysicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learningPhysicsTests.swift; sourceTree = "<group>"; };
 		CC62762821302B1400882A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8916AA21317A2300703E02 /* SKPhysicsBodyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKPhysicsBodyExtension.swift; sourceTree = "<group>"; };
+		CCCC4EE5213329E300451350 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		CC62760A21302B1200882A61 /* learningPhysics */ = {
 			isa = PBXGroup;
 			children = (
+				CC8916A9213179F600703E02 /* Extensions */,
 				CC62760B21302B1200882A61 /* AppDelegate.swift */,
 				CC62760D21302B1200882A61 /* GameScene.sks */,
 				CC62760F21302B1200882A61 /* Actions.sks */,
@@ -92,6 +97,7 @@
 				CC62761821302B1400882A61 /* Assets.xcassets */,
 				CC62761A21302B1400882A61 /* LaunchScreen.storyboard */,
 				CC62761D21302B1400882A61 /* Info.plist */,
+				CCCC4EE5213329E300451350 /* Ball.swift */,
 			);
 			path = learningPhysics;
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				CC62762821302B1400882A61 /* Info.plist */,
 			);
 			path = learningPhysicsTests;
+			sourceTree = "<group>";
+		};
+		CC8916A9213179F600703E02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC8916AA21317A2300703E02 /* SKPhysicsBodyExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +224,9 @@
 			files = (
 				CC62761221302B1200882A61 /* GameScene.swift in Sources */,
 				CC62761421302B1200882A61 /* GameViewController.swift in Sources */,
+				CCCC4EE6213329E300451350 /* Ball.swift in Sources */,
 				CC62760C21302B1200882A61 /* AppDelegate.swift in Sources */,
+				CC8916AB21317A2300703E02 /* SKPhysicsBodyExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
