@@ -9,13 +9,16 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
   
   private var label : SKLabelNode?
   private var ballLabel : SKLabelNode?
   private var brick : SKSpriteNode?
   
+  
+  
   override func didMove(to view: SKView) {
+    
     self.label = self.childNode(withName: "//dropLabel") as? SKLabelNode
     self.ballLabel = self.childNode(withName: "//ballLabel") as? SKLabelNode
     
@@ -24,11 +27,39 @@ class GameScene: SKScene {
     let framePhysics = SKPhysicsBody(edgeLoopFrom: self.frame)
     framePhysics.friction = 0.2
     framePhysics.restitution = 0.6
+    framePhysics.isDynamic = false
     self.physicsBody = framePhysics
+    
+    physicsWorld.contactDelegate = self
+    self.name = "wall"
+
   }
   
+
   
+  func didBegin(_ contact: SKPhysicsContact) {
+    let body0 = contact.bodyA.node!
+    let body1 = contact.bodyB.node!
+    let collisionArr = [body0.name!, body1.name! ]
+    if collisionArr.contains("brick") && collisionArr.contains("ball") {
+      if body1.name! == "ball" {
+        body1.removeFromParent()
+      }
+      if body0.name! == "ball" {
+        body0.removeFromParent()
+      }
+    }
+    
+
+  }
   
+  func didEnter(_ contact: SKPhysicsContact) {
+    print("lol")
+  }
+  
+func didBeginContact(contact: SKPhysicsContact) {
+  print("zorp")
+  }
   func touchDown(atPoint pos : CGPoint) {
   }
   

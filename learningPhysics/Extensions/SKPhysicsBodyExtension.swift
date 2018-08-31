@@ -21,6 +21,7 @@ extension SKPhysicsBody {
     physicsBody.categoryBitMask = 0x1
     physicsBody.friction = 0.3
     physicsBody.restitution = 0.8
+    physicsBody.contactTestBitMask = physicsBody.collisionBitMask
     return physicsBody
 
   }
@@ -36,6 +37,8 @@ extension SKPhysicsBody {
     physicsBody.angularDamping = 0.2
     physicsBody.collisionBitMask = 0x1
     physicsBody.categoryBitMask = 0x1
+    physicsBody.contactTestBitMask = physicsBody.collisionBitMask
+
     return physicsBody
     
   }

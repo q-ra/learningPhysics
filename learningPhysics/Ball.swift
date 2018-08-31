@@ -22,6 +22,7 @@ class BallWrapper{
     let color = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
     self.ball.fillColor = color
     self.ball.strokeColor = color
+    self.ball.name = "ball"
   }
   
   
